@@ -1,0 +1,260 @@
+@charset "UTF-8";
+/* Nossa historia---------------------------------------------*/
+
+
+/*Fotos página inicial_______________________________________________________-->*/
+.space{
+    margin: 30px 0 0 0;
+}
+.wrapper {
+    margin: 50px
+    padding: 50px;
+    border: 0;
+    box-sizing: border-box;
+    width: 100vw;
+
+
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+.slide-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.slide-list{
+    display: flex;
+}
+.slide-item{
+    cursor: grab;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 50vw;
+
+}
+.slide-content{
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: #070707 0 12px 12px;
+    position: relative
+
+}
+.slide-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+/*Descrição______________________________________________________________*/
+.slide-description {
+    border-radius: 10px;
+    background: linear-gradient(to top, #000, transparent);
+    color: #fff;
+    position: absolute;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
+
+.slide-description h5 {
+    font-family: 'Koulen', sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 16px
+}
+
+.slide-description p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+
+.slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+    border: none;
+}
+
+.slide-nav-previous {
+    left: 20px;
+}
+
+.slide-nav-next {
+    right: 20px;
+}
+
+.slide-controls {
+    margin: 30px auto 0;
+}
+
+.slide-control-button {
+    color: grey;
+    cursor: pointer;
+    background: transparent;
+    font-size: 12px;
+    margin: 0 5px;
+    border: none;
+}
+
+.slide-control-button.active {
+    color: darkgreen;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-description {
+        padding: 10px;
+    }
+
+    .slide-description h5 {
+        font-size: 24px;
+        top: 0;
+    }
+
+    .slide-description p {
+        display: none;
+    }
+
+    .slide-nav-button {
+        margin-top: -20px;
+        font-size: 28px;
+    }
+
+    .slide-nav-previous {
+        left: 10px;
+    }
+
+    .slide-nav-next {
+        right: 10px;
+    }
+
+    .slide-controls {
+        margin: 15px auto 0;
+    }
+
+    .slide-control-button {
+        font-size: 14px;
+    }
+}
+
+
+/*Galeria de Fotos---------------------------*/
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2vw;
+    padding: 0 2vw;
+    position: relative;
+    margin-bottom: 40px;
+}
+.gallery-items{
+    width: 350px;
+    height: 350px;
+    border: 4px solid #FFF;
+    box-shadow: 5px 5px 5px #0006;
+    flex-grow: 1;
+    transition: transform .5s linear;
+    overflow: hidden; /* Impede o overflow da imagem ao expandir */
+    margin: 10px;
+}
+.gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s linear; /* Adicione a transição aqui */
+}
+
+/*.gallery-items:hover{
+    transform: scale(1.5);*/
+
+}
+.gallery-items:hover img {
+    transform: scale(1.5); /* Expande a imagem */
+}
+
+
+.pg1{
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.7), transparent);
+    box-shadow: #070707 0 3px 3px;
+    border-radius: 20px;
+
+}
+.fotos-galeria{
+    position: absolute;
+    top: 235px;
+    left: 990px;
+}
+
+.videos-galeria{
+    position: absolute;
+    top: 200px;
+    left: 950px;
+}
+.audios-galeria{
+    position: absolute;
+    top: 240px;
+    left: 995px;
+}
+.pdf-galeria{
+    position: absolute;
+    top: 240px;
+    left: 990px;
+}
+.descrição-fotos{
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    font-size: 23px;
+    color: whitesmoke;
+    text-shadow: darkgreen 2px 2px 2px;
+    vertical-align: auto;
+    padding: 3px 0 3px 20px;
+    margin: 75px 20px 10px 10px;
+
+}
+
+/* Estilos para os botões do carrossel */
+.slick-prev, .slick-next {
+    font-size: 18px;
+    line-height: 1;
+    position: absolute;
+    top: 90%;
+    margin: 50px 35px;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    color: white;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.7), transparent);
+
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: white;
+    color: darkgreen;
+}
+
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -40px;
+}
+ /* fotos net -------------------------------------------------------*/
+

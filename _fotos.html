@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEFRADES</title>
+    <link rel="icon" href="_imagens/_logoicone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="_css/_style.css">
+    <link rel="stylesheet" href="_css/_fotos.css">
+    <link rel="stylesheet" href="_css/_midia.css">
+
+    <!-- Link para o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link para o Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.gallery-container').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '<button class="slick-prev" aria-label="Voltar" type="button">Voltar</button>',
+                nextArrow: '<button class="slick-next" aria-label="Avançar" type="button">Avançar</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.gallery-items').hover(function(){
+                $('.gallery-items').addClass('scale-19');
+            }, function(){
+                $('.gallery-items').removeClass('scale-19');
+            });
+        });
+    </script>
+
+
+
+</head>
+<body>
+
+<!--Menu de Navegação_______________________________________________________-->
+<header id="cabeçalho">
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul class="nav">
+            <li id="nave"><a href="_index.html">Inicio</a></li>
+            <li id="nave"><a href="_nossahistoria.html">Nossa História</a></li>
+            <li id="nave"><a href="_estudo-do-espiritismo.html">Estudo do Espiritismo</a></li>
+            <li class="submenu"><a href="_atendimento.html">Atendimento</a>
+                <ul class="dropdown">
+                    <li id="navesub"><a href="_espiritual.html">Espíritual</a></li>
+                    <li id="navesub"><a href="_social.html">Social</a></li>
+                    <li id="navesub"><a href="_psicologico.html">Psicologico</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu"><a href="_midias.html">Midías</a>
+                <ul class="dropdown">
+                    <li id="navesub"><a href="_fotos.html">Fotos</a> </li>
+                    <li id="navesub"><a href="_videos.html">Videos</a></li>
+                    <li id="navesub"><a href="_audio.html">Audios</a></li>
+                    <li id="navesub"><a href="_pdf.html">PDF</a></li>
+                </ul>
+            </li>
+            <li id="nave"><a href="_obras-lemes.html">Obras Lemes</a></li>
+            <li id="nave"><a href="_faleconosco.html">Fale Conosco</a></li>
+        </ul>
+
+    </nav>
+
+<!--Barra de Pesquisa--------------------------------------------------->
+
+    <script>
+
+        $(document).ready(function(){
+            // Pega o valor da barra de pesquisa
+            var searchInput = $("#pesquisa input[type=text]");
+
+            // Adiciona um evento de digitação na barra de pesquisa
+            searchInput.on("keyup", function(){
+                // Pega o valor da barra de pesquisa
+                var searchTerm = searchInput.val();
+
+                // Filtra todos os objetos na página com base no valor da barra de pesquisa
+                var filteredObjects = $(".pg1").find("*").filter(function(){
+                    // Retorna true se o objeto contiver o valor da barra de pesquisa
+                    return $(this).text().toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
+                });
+
+                // Oculta todos os objetos na página
+                $(".pg1").find("*").hide();
+
+                // Mostra os objetos filtrados
+                filteredObjects.show();
+            });
+        });
+
+    </script>
+    <div class="pesquisa">
+        <form action="/pesquisa" method="get">
+            <input type="text" name="q" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
+        </form>
+</header>
+<!--Logotipo e Titulo_______________________________________________________ -->
+
+<div class="logo">
+    <a href="_index.html"><img id="logotipo" src="_imagens/_logo.jpg" alt="logotipo"/></a>
+    <h1 id="log">
+        <b>GEFRADES - Grupo Espírita Fraterno Divano Elias Da Silva</b>
+    </h1>
+    <h2>Fotos</h2>
+
+</div>
+<div class="pg1">
+    <img class="fotos-galeria" src="_imagens/_fotos.png">
+        <h3>Galeria de Fotos</h3>
+
+    <main>
+        <h3 class="geral"> Batizado - Data 20/05/2023</h3>
+        <p class="descrição-fotos"> Fotos registradas em:</p>
+
+
+        <div class="gallery-container">
+            <a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a><a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a><a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a><a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a><a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a><a href="_imagens/_fotosgefrades/_1.jpg" class="gallery-items">
+                <img src="_imagens/_fotosgefrades/_1.jpg" alt="Chick Hicks">
+            </a>
+            <a href="_html/_fotosgefrades/_2.jpg" class="gallery-items">
+                <img src="_html/_fotosgefrades/_2.jpg" alt="Doctor Hudson">
+            </a>
+            <a href="_html/_fotosgefrades/_3.jpg" class="gallery-items">
+                <img src="_html/_fotosgefrades/_3.jpg" alt="Fillmore">
+            </a>
+            <a href="_html/_fotosgefrades/_4.jpg" class="gallery-items">
+                <img src="_html/_fotosgefrades/_4.jpg" alt="Flo">
+            </a>
+        </div>
+
+            <!--<h3 class="geral"> Obras Sede - Data 20/05/2023</h3>-->
+        <p class="descrição-fotos"> Construção Da Nova Sede:</p>
+
+        <div class="gallery-container">
+
+            <a href="_imagens/_obra1.jpg" class="gallery-items">
+            <img src="_imagens/_obra1.jpg" alt="Chick Hicks"></a>
+            <a href="_imagens/_obra2.jpg" class="gallery-items">
+            <img src="_imagens/_obra2.jpg" alt="Chick Hicks"></a>
+            <a href="_imagens/_obra3.jpg" class="gallery-items">
+            <img src="_imagens/_obra3.jpg" alt="Chick Hicks"></a>
+
+        </div>
+    </main>
+</div>
+
+
+
+
+
+    <!--Inicio do Rodápe__________________________________________________________-->
+    <footer id="rodape">
+        <p> Todos os direitos reservados &copy; GEFRADES - Grupo Espírita Fraterno Divano Elias Da Silva. </p>
+        <p>Endereço: R. Dr. Prates, 344 - St. Central, Catalão - GO, 75701-360</p>
+    </footer>
+</body>
+</html>

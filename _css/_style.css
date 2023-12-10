@@ -1,0 +1,599 @@
+@charset "UTF-8";
+
+/*Plano de Fundo---------------------------------------------*/
+body {
+    background-repeat: no-repeat; /* não permite a repetição do plano de fundo*/
+    background-size: contain;/*posição do plano de fundo*/
+    background-color: #c4c5b7; /*plano de fundo do corpo do site*/
+}
+
+
+/* Menu Navegação------------------------------------------------*/
+nav#menu{
+    display: block; /* Bloco pode flutuar pela tela*/
+
+}
+
+nav#menu ul{
+    padding:0;/*remover o padding e o margin do elemento*/
+    margin: 0;/*remover o padding e o margin do elemento*/
+
+}
+
+
+nav#menu ul{
+    list-style: none; /*retira os caracteres de marcação*/
+    text-transform: uppercase; /* colocar em caixa alta */
+    position: relative; /*permite que se movimento pelo site*/
+    top: -10px; /* define a altura */
+    left: 0; /* define a posição a esquerda*/
+    text-align: center;/*centralizar o texto*/
+
+}
+nav#menu ul li {
+    display: inline-block;/* coloca o menu em fila horizontal */
+    /*float: left; /* coloca o menu em fila horizontal */
+    background-color: darkgreen; /* plano de fundo da caixa de texto*/
+    padding: 6px; /* define o espaço interno na caixa de texto*/
+    margin: 2px; /*define o espaço fora da caixa de texto*/
+    border-radius: 0 0 10px 10px; /*aredonda as bordas */
+    transition: background-color 1s; /*faz a transição em 1segundo */
+    box-shadow: #070707 0 12px 12px;/*colocando a borda no menu*/
+    position: relative;/*defininado a posição*/
+
+}
+nav#menu h1{
+    display: none; /*esconde o titulo*/
+}
+nav#menu li{
+    font-size: 14px;/*tamanho da fonte*/
+    font-family: Koulen, "Arial", sans-serif;/*estilo da fonte*/
+}
+
+nav#menu ul li a {
+    color: white;/*define a cor da ancora*/
+    text-decoration: none; /*esconde o hiperlink*/
+}
+nav#menu a:hover{
+    color: black;/*cor sob o mouse*/
+    text-decoration: none;/*retira a marcação hioertexto*/
+}
+
+nav#menu ul li:hover { /*cria a mudança de estado quando passa o cursor do mouse*/
+    background-color: whitesmoke; /*muda o plando de fundo da caixa de texto*/
+    font-weight: bold; /* coloca o texto em negrito*/
+}
+nav#menu ul li:hover{
+    color: darkgreen; /*muda a cor do texto*/
+
+}
+nav#menu ul ul{
+    position: absolute;
+    display: none;
+    margin: 37px;
+    left: -50px;
+    padding: 5px;
+
+}
+nav#menu ul li:hover ul{
+    display: block;
+}
+nav#menu ul li a{
+    display: block;
+}
+nav#menu li li {
+    margin: 0;
+    display: flex;
+    text-align: left;
+    padding: 16px;
+
+}
+nav#menu a:hover {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Logotipo e Titulo-----------------------------------------------------*/
+
+img#logotipo{
+    position: relative;
+    float: left;
+    margin: 20px;
+    box-shadow: #070707 0 12px 12px;
+
+}
+img#logotipo{
+    top: -30px;
+}
+h1#log {
+    color: darkgreen;
+    font-size: 33px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    text-shadow: 2px 2px 15px white;
+    margin-top: 20px;
+
+}
+.logo{
+    text-align: right;
+    text-shadow: 5px 5px 5px darkgreen;
+    border-bottom: 5px darkgreen solid;
+    margin-bottom: 20px;
+    padding-right: 40px;
+
+}
+.definição{
+    text-align: right;
+    color: black;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.7), transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    padding: 10px 30px 10px 10px;
+    font-size: 20.5px;
+    font-family:  Garamond, "Arial", sans-serif;
+    width: 82%;
+    list-style: 30px;
+    margin: 0 0 30px 10%;
+
+}
+
+/*Area de login___________________________________________________*/
+
+.login{
+    color: white;
+    font-size: 20px;
+    font-family:  Garamond, "Arial", sans-serif;
+    margin: 5px;
+    text-shadow: 5px 5px 5px darkgreen;
+    float: right;
+    top: -60px;
+}
+/*Banner----------------------------------------*/
+
+.slide {
+    max-width: 100%;
+    height: 300px;
+    margin: 30px 28px 45px 29px;
+    position: relative;
+    display: grid;
+    left: 5px;
+    box-shadow: #070707 0 12px 12px;
+    border-radius: 20px;
+
+}
+
+
+.slide-items {
+    grid-area: 1/1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+
+
+
+> img {
+    max-width: 92.5vw;
+    min-width: 92.5vw;
+    max-height: 300px;
+    min-height: 300px;
+    height: auto;
+    display: block;
+
+}
+
+> * {
+    opacity: 0;
+    top: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+> .active {
+    opacity: 1;
+    position: relative;
+    pointer-events: initial;
+}
+}
+
+
+.slide-thumb {
+    display: flex;
+    grid-column: 1 /3;
+    padding: 4px;
+span {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    height: 4px;
+    margin-right: 4px;
+    border-radius: 4px;
+    display: block;
+&.active {
+ // background: rgba(255, 255, 255, 0.8);
+     overflow: hidden;
+&::after {
+     content: "";
+     display: block;
+     position: relative;
+     height: inherit;
+     background: rgba(255, 255, 255, 0.9);
+     transform: translateX(-100%);
+     animation: thumb 10s forwards linear;
+ }
+}
+}
+span:last-child {
+    margin-right: 0;
+}
+}
+
+.slide-nav {
+    grid-area: 1/1;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+button {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+}
+
+@keyframes thumb {
+    to {
+        transform: initial;
+    }
+}
+.slide-prev{
+    width: 100px;
+    height: 45px;
+    font-size: 35px;
+    position: relative;
+    top: 112px;
+    left: -30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), transparent);
+    border: none;
+    color: grey;
+}
+.slide-next{
+    width: 100px;
+    height: 50px;
+    font-size: 35px;
+    position: relative;
+    top: 112px;
+    left: 87%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), transparent);
+    border: none;
+    color: grey;
+}
+/* Radio -----------------------------------------------------------------------------------*/
+.radio{
+    margin: 0;
+    padding: 0;
+    width: 96vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+iframe.painel{
+    border-radius: 10px;
+    box-shadow: #070707 0 12px 12px;
+
+}
+h4{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+/*Banner___________________________________________________________--*/
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    position: relative;
+    margin-bottom: 40px;
+}
+.kardec {
+    margin: auto;
+    box-shadow: #070707 0 12px 12px;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.capa {
+    position: absolute;
+    display: block;
+    width: 93%;
+
+}
+h1#capa1{
+    color: black;
+    font-size: 40px;
+    font-family: Garamond, sans-serif;
+    text-align: left;
+    text-shadow: 2px 2px 30px #3b4c2c;
+    padding-top: 0;
+    opacity: 40%;
+}
+p#capa2{
+    color: black;
+    font-size: 23px;
+    font-family: Garamond, sans-serif;
+    text-align: left;
+    line-height: 1.5;
+    text-shadow: 2px 2px 30px #3b4c2c;
+    opacity: 60%;
+    margin-right: 50%;
+
+}
+/*Titulos e topicos----------------------------------------------*/
+h2{
+    color: white;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.7), transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    padding: 10px 30px 10px 10px;
+    font-size: 40px;
+    font-family:  Garamond, "Arial", sans-serif;
+    width: 82%;
+    list-style: 30px;
+    margin: 0 0 30px 10%;
+    text-shadow: 5px 5px 5px darkgreen;
+
+}
+
+h3{
+    color: white;
+    background: linear-gradient(to right, darkgreen, transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: #070707 0 12px 12px;
+    margin: 20px 60px 30px 10px;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family:  Garamond, "Arial", sans-serif;
+    text-shadow: 5px 5px 5px black;
+
+}
+.geral{
+    color: white;
+    background: linear-gradient(to top, darkgreen, transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    border-radius: 50px;
+    box-shadow: #070707 0 12px 12px;
+    margin: 40px auto;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family:  Garamond, "Arial", sans-serif;
+    text-shadow: 5px 5px 5px black;
+    width: 70%;
+    text-align: center;
+
+}
+
+/* Plano de Fundo Caixas------------------------------------------------*/
+.pg{
+    margin: 20px auto;
+    padding: 20px 25px 35px 25px;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.2), transparent);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0006;
+
+}
+.pg p{
+    text-align: justify;
+    font-size: 19px;
+    text-indent: 30px;
+    font-family: Calibri;
+}
+.centro {
+    display: flex;
+    align-items: center;
+}
+
+/*Configuração tabela-----------------------------------------------------*/
+
+table#horario {
+    border: darkgreen solid 1px;
+    border-spacing: 0;
+    margin: 50px auto 20px auto;
+    font-size: 20px;
+    background-color: whitesmoke ;
+    box-shadow: #070707 0 3px 3px;
+    border-radius: 10px;
+    color: darkgreen;
+
+}
+caption.topo{
+    text-align: center;
+}
+table#horario td{
+    border: darkgreen solid 1px;
+    padding: 5px 30px;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+
+
+/* Ferramenta de Pesquisa-----------------------------------------*/
+
+.pesquisa{
+    position: absolute;
+    top: 190px;
+    left: 900px;
+}
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+/*Formulario Congtato----------------------------------*/
+
+.botton-contato{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-family: Koulen, "Arial", sans-serif;
+    box-shadow: #070707 0 12px 12px;
+    border-radius: 10px;
+    float: right;
+    margin-top: 10px;
+
+}
+.botton-contato:hover{
+    color: green;
+    background-color: white;
+}
+.icone-contato{
+    position: absolute;
+    top: 390px;
+    left: 650px;
+
+}
+.rede-social {
+    display: flex;
+    justify-content: center;
+
+}
+.icone-rede-social{
+    margin: 20px 50px;
+    display: flex;
+    padding-top: auto;
+    box-shadow: #070707 0 12px 12px;
+    border-radius: 10px;
+
+
+}
+
+
+
+/*Destaque-----------------------------------------------*/
+
+.elemento-pai{
+    display:flex;
+    align-items: initial;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.destaque-direita .destaque-esquerda {
+}
+.descrição-destaque {
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    font-size: 23px;
+    color: whitesmoke;
+    text-shadow: darkgreen 2px 2px 2px;
+    vertical-align: auto;
+    padding: 3px 0 3px 20px;
+}
+
+
+.sessao-destaque {
+    width: 87%;
+    margin: 20px;
+    /*background: linear-gradient(to top, rgba(0, 128, 0, 0.2), transparent);*/
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #0006;
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px;
+    text-indent: 30px;
+
+}
+.fotos-obra{
+    display: flex;
+    justify-content: center ;
+    align-items: center
+    margin: 10px;
+}
+.foto-obra{
+    margin: 10px;
+    box-shadow: 5px 5px 5px #0006;
+    border: 4px solid #FFF;
+
+}
+.foto-obra:hover{
+    transform: translate(-50%, -50%) scale(4.1);
+
+}
+.imagem-bazar{
+    box-shadow: 5px 5px 5px #0006;
+
+}
+
+/* Momento gefrades--------------------------*/
+
+.momento-gefrades{
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    box-shadow: 5px 5px 5px #0006;
+    padding: 25px;
+    margin: 35px;
+    color: black;
+    font-size: 20px;
+    text-shadow: white 2px 2px 2px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+/*.momento-gefrades:hover{
+    transform: translate(-50%, -50%) scale(1.1);
+    width: 60vw;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    background-color: white;
+    color: white;
+    left: 550px;
+    font-size: 30px;
+
+}*/
+
+
+
+/*Mapa------------------------------------------------------------------*/
+.mapa{
+    display: block;
+    width: 800px;
+    height: 150px;
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: #070707 0 12px 12px;
+
+}
+/*Rodapé-----------------------------------------------------------------*/
+footer#rodape{
+    text-align: center;
+    border-top: 6px solid darkgreen;
+    margin-top: 30px;
+
+}

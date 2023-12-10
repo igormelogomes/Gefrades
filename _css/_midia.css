@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/*Midias-------------------------------------------------------*/
+
+
+/*Videos------------------------------------------------------------*/
+.videos {
+    display: inline-block;
+    margin: 20px auto;
+    position: relative;
+    float: left;
+}
+.legvideo{
+    width: 40%;
+    float: right;
+    margin: 30px;
+
+}
+.legvideo{
+    color: darkgreen;
+
+}
+
+/* Audios---------------------------------------------------*/
+
+p.descrição-audío{
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    font-size: 25px;
+    float: left;
+    padding: 0 600px 0 0;
+    color: whitesmoke;
+    text-shadow: darkgreen 2px 2px 2px;
+    vertical-align: auto;
+
+
+}
+.mp4{
+    padding: 5px;
+    controls: none;
+}
+
+/*Midia-----------------------------------------*/
+
+.estrutura{
+    display: flex;
+
+}
+.nossas-midias{
+    width: 60%;
+    margin: 20px 30px 0 100px;
+    text-align: justify;
+}
+li#lista-midia{
+    font-size: 18px;
+}
+.md1 {
+    color: white;
+    background: linear-gradient(to right, darkgreen, transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: #070707 0 12px 12px;
+    font-size: 25px;
+    font-family: Garamond, "Arial", sans-serif;
+    text-shadow: 5px 5px 5px black;
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.legmidia {
+    font-size: 23px;
+    text-align: justify;
+    text-indent: 50px;
+    margin-left: 80px;
+    width: 70%;
+    padding: 20px;
+
+}
+
+
+/*Videos----------------------------------------------------------------*/
+
+p.descrição-videos{
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    font-size: 25px;
+    color: whitesmoke;
+    text-shadow: darkgreen 2px 2px 2px;
+    vertical-align: auto;
+
+}
+.descrição-pdf{
+    background: linear-gradient(to right, rgba(0, 128, 0, 0.7), transparent);
+    font-size: 23px;
+    color: whitesmoke;
+    text-shadow: darkgreen 2px 2px 2px;
+    vertical-align: auto;
+    padding: 3px 0 3px 20px;
+
+}
+
+/* Arquivos e livros---------------------------------------------------*/
+.le {
+    position: relative;
+    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+}
+.livro {
+    position: relative;
+    width: 145px;
+    height: 200px;
+    margin-left: 30px;
+    box-shadow: 5px 5px 5px #0006;
+
+}
+
+.livro:hover {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.5);
+    z-index: 1;
+}
+p.sumario {
+    font-size: 23px;
+    text-align: justify;
+    text-indent: 50px;
+    display: inline-block;
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.3), transparent);
+    margin-left: 45px;
+    box-shadow: 5px 5px 5px #0006;
+
+
+}
+p.sumario {
+    width: 75%;
+    padding: 20px;
+    height: 100%;
+}
+.le a {
+    position: absolute;
+    color: white;
+    background: linear-gradient(to top, darkgreen, transparent);
+    stop-color: rgba(0, 128, 0, 0.7);
+    border-radius: 50px;
+    box-shadow: #070707 0 12px 12px;
+    bottom: 20px;
+    right: 60px;
+    text-decoration: none; /*esconde o hiperlink*/
+}
+
+.botton{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-family: Koulen, "Arial", sans-serif;
+    padding-top: 7px;
+    box-shadow: #070707 0 12px 12px;
+
+}
+.le a:hover {
+    color: darkgreen;
+    background-color: whitesmoke;
+
+}
+/* Estilo botão galeria-------------------------------------------------*/

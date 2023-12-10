@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEFRADES</title>
+    <link rel="icon" href="_imagens/_logoicone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="_css/_style.css">
+    <link rel="stylesheet" href="_css/_fotos.css">
+    <link rel="stylesheet" href="_css/_midia.css">
+
+
+
+</head>
+<body>
+
+<!--Menu de Navegação_______________________________________________________-->
+<header id="cabeçalho">
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul class="nav">
+            <li id="nave"><a href="_index.html">Inicio</a></li>
+            <li id="nave"><a href="_nossahistoria.html">Nossa História</a></li>
+            <li id="nave"><a href="_estudo-do-espiritismo.html">Estudo do Espiritismo</a></li>
+            <li class="submenu"><a href="_atendimento.html">Atendimento</a>
+                <ul class="dropdown">
+                    <li id="navesub"><a href="_espiritual.html">Espíritual</a></li>
+                    <li id="navesub"><a href="_social.html">Social</a></li>
+                    <li id="navesub"><a href="_psicologico.html">Psicologico</a></li>
+
+                </ul>
+            </li>
+            <li class="submenu"><a href="_midias.html">Midías</a>
+                <ul class="dropdown">
+                    <li id="navesub"><a href="_fotos.html">Fotos</a> </li>
+                    <li id="navesub"><a href="_videos.html">Videos</a></li>
+                    <li id="navesub"><a href="_audio.html">Audios</a></li>
+                    <li id="navesub"><a href="_pdf.html">Biblioteca</a></li>
+                </ul>
+            </li>
+            <li id="nave"><a href="_obras-lemes.html">Obras Lemes</a></li>
+            <li id="nave"><a href="_faleconosco.html">Fale Conosco</a></li>
+        </ul>
+
+    </nav>
+<!--CAMPO DE PESQUISA________________________________________________-->
+    <div class="pesquisa">
+        <form action="/" method="get">
+            <input type="text" name="q" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
+        </form>
+    </div>
+    <script>
+        function pesquisar() {
+            // Obtém o valor da pesquisa
+            const pesquisa = document.querySelector("input[name='q']").value;
+
+            // Pesquisa nos elementos da página
+            const elementos = document.querySelectorAll(pesquisa);
+
+            // Exibe os resultados da pesquisa
+            for (const elemento of elementos) {
+                elemento.style.display = "block";
+            }
+        }
+
+        // Define um evento de clique no botão de pesquisa
+        document.querySelector("input[type='submit']").addEventListener("click", pesquisar);
+    </script>
+</header>
+<!--Logotipo e Titulo_______________________________________________________ -->
+
+<div class="logo">
+    <a href="_index.html"><img id="logotipo" src="_imagens/_logo.jpg" alt="logotipo"/></a>
+    <h1 id="log">
+        <b>GEFRADES - Grupo Espírita Fraterno Divano Elias Da Silva</b>
+    </h1>
+    <h2>Biblioteca de Livros e Artigos em PDF</h2>
+
+</div>
+<div class="pg">
+    <h3>Arquivos em PDF</h3>
+    <img class="pdf-galeria" src="_imagens/_pdf.png">
+
+    <div class="livros">
+        <h3 class="geral"> Obras de Allan Kardec</h3>
+
+        <h1 class="descrição-pdf">O Livro dos Espíritos (1857)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_o-livro-dos-espiritos.jpg" alt="Capa O Livro dos Espiritos">
+            <p class="sumario">O Livro dos Espíritos é o primeiro dos cinco livros que compõem a Codificação Espírita, obra elaborada por Allan Kardec. Foi publicado pela primeira vez em 1857 e apresenta os fundamentos da Doutrina Espírita, tais como a existência de Deus, a imortalidade da alma, a reencarnação e a comunicação entre os vivos e os mortos.</p>
+            <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-Livro-dos-Esp%C3%ADritos-Guillon-1.pdf">Acessar</a>
+
+        </div>
+
+    </div>
+
+    <div class="livros">
+
+        <h1 class="descrição-pdf">O Que é o Espiritismo? (1859)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_o-que-e-o-espiritismo.jpg" alt="Capa O Que é o Espiritismo? (1859)">
+            <p class="sumario">
+                O Que é o Espiritismo?, de Allan Kardec, é um livro que apresenta os fundamentos do Espiritismo, uma doutrina religiosa e filosófica que se baseia na comunicação com os espíritos. O livro foi publicado pela primeira vez em 1859 e é considerado o primeiro livro do Espiritismo.</p>
+            <a class="botton" target="_blank" href="https://www.febnet.org.br/portal/wp-content/uploads/2021/09/WEB-O-que-e-o-Espiritismo-Reformador.pdf">Acessar</a>
+
+        </div>
+    </div>
+
+    <div class="livros">
+
+        <h1 class="descrição-pdf">O Livro dos Médiuns (1861)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_o-livro-dos-mediuns.jpg" alt="Capa O Livro dos Médiuns (1861)">
+            <p class="sumario">O Livro dos Médiuns, de Allan Kardec, é um guia para a prática da mediunidade, que é a capacidade de se comunicar com os espíritos. O livro foi publicado pela primeira vez em 1861 e é considerado um dos mais importantes livros do Espiritismo.</p>
+            <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-Livro-dos-Mediuns-Guillon-1.pdf">Acessar</a>
+
+        </div>
+    </div>
+
+    <div class="livros">
+
+        <h1 class="descrição-pdf">O Evangelho segundo o Espiritismo (1864)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_o-evangelho-segundo-espiritismo.jpg" alt="Capa O Evangelho segundo o Espiritismo (1864)">
+            <p class="sumario">
+                Este livro é uma interpretação espírita dos ensinamentos de Jesus Cristo. É dividido em seis partes: a vida de Jesus, os ensinos de Jesus, os milagres de Jesus, a doutrina de Jesus, o Evangelho e o Espiritismo e a moral do Evangelho.</p>
+            <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-O-Evangelho-segundo-o-Espiritismo-Guillon.pdf">Acessar</a>
+
+        </div>
+    </div>
+
+    <div class="livros">
+
+        <h1 class="descrição-pdf">O Céu e o Inferno (1865)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_o-ceu-e-o-inferno.jpg" alt="Capa O Céu e o Inferno (1865)">
+            <p class="sumario">
+                Este livro é uma descrição da vida futura, de acordo com a Doutrina Espírita. É dividido em duas partes: a vida futura e a justiça divina. O livro também afirma que a reencarnação é uma oportunidade para os espíritos evoluírem espiritualmente. Através da reencarnação, os espíritos podem aprender com os seus erros e melhorar as suas vidas.</p>
+            <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-O-Ceu-e-o-inferno-Guillon.pdf">Acessar</a>
+
+        </div>
+    </div>
+
+     <div class="livros">
+
+            <h1 class="descrição-pdf">A Gênese (1868)</h1>
+            <div class="le">
+                <img class="livro" src="_imagens/_a-genese.jpg" alt="Capa A Gênese (1868)">
+                <p class="sumario">
+                    O livro A Gênese, de Allan Kardec, é uma obra espírita que aborda a origem do mundo e da humanidade. Foi publicado pela primeira vez em 1868 e é considerado um dos cinco livros básicos da Doutrina Espírita.</p>
+                <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-A-Genese-Guillon.pdf">Acessar</a>
+
+            </div>
+        </div>
+
+
+     <div class="livros">
+
+            <h1 class="descrição-pdf">Obras Póstumas (1890)</h1>
+            <div class="le">
+                <img class="livro" src="_imagens/_obras-postumas.jpg" alt="Capa OObras Póstumas (1890)">
+                <p class="sumario">
+
+                    Obras Póstumas, de Allan Kardec, é uma coletânea de escritos do codificador do Espiritismo, publicada postumamente em 1890. O livro reúne textos sobre uma variedade de temas, incluindo a doutrina espírita, a mediunidade, a vida após a morte e a educação.</p>
+                <a class="botton" target="_blank" href="https://www.febnet.org.br/wp-content/uploads/2012/07/WEB-Obras-postumas-Guillon.pdf">Acessar</a>
+
+            </div>
+        </div>
+
+</div>
+
+<div class="pg">
+    <div class="livros">
+        <h3 class="geral"> Obras de Francisco Candido Xavier (Chico Xavier)</h3>
+
+        <h1 class="descrição-pdf">Nosso Lar (1944)</h1>
+        <div class="le">
+            <img class="livro" src="_imagens/_nosso-lar.jpg" alt="Capa O Livro dos Espiritos">
+            <p class="sumario">"Nosso Lar" é um livro psicografado pelo médium brasileiro Chico Xavier, que é considerado um dos maiores expoentes do espiritismo no Brasil. O livro foi ditado pelo espírito André Luiz e publicado em 1944. Ele faz parte de uma série de livros que relatam as experiências do espírito André Luiz após sua desencarnação.
+
+                O livro "Nosso Lar" descreve a vida após a morte, narrando a jornada de André Luiz no mundo espiritual, que é chamado de "Nosso Lar". Através dos olhos do personagem, o livro explora os diferentes aspectos da vida no plano espiritual, incluindo a adaptação dos recém-chegados, as instituições de auxílio e educação espiritual, as cidades espirituais, o trabalho, a reencarnação, entre outros temas.</p>
+            <a class="botton" target="_blank" href="https://files.comunidades.net/portaldoespirito/Nosso_Lar.pdf">Acessar</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<!--Inicio do Rodápe__________________________________________________________-->
+<footer id="rodape">
+    <p> Todos os direitos reservados &copy; GEFRADES - Grupo Espírita Fraterno Divano Elias Da Silva. </p>
+    <p>Endereço: R. Dr. Prates, 344 - St. Central, Catalão - GO, 75701-360</p>
+</footer>
+
+</html>
